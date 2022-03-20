@@ -8,6 +8,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: justify;
 }
 
 #timeline:hover .tl-item {
@@ -108,6 +109,9 @@ body {
   font-size: 1.44rem;
   font-weight: normal;
 }
+.tl-content p {
+  margin-top: 10px;
+}
 
 .tl-year {
   position: absolute;
@@ -147,3 +151,28 @@ body {
           filter: grayscale(100%);
 }
 /*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+  .tl-content {
+    top: 40%;
+  }
+  .tl-content h1 {
+    font-size: 0.7rem;
+  }
+  .tl-content p {
+    font-size: 0.6rem;
+  }
+  .tl-year {
+    top: 30%;
+    bottom: 70%;
+  }
+  .tl-year p{
+    font-size: 1.2rem;
+  }
+  #timeline:hover .tl-item {
+    width: 13.3333%;
+  }
+}

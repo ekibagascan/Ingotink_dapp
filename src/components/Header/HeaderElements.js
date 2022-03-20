@@ -80,7 +80,7 @@ export const NavLinks = styled(LinkS)`
 `;
 
 export const ConnectButton = styled.button`
-  padding: 1rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   margin: 20px;
   border: none;
   text-align: center;
@@ -89,12 +89,11 @@ export const ConnectButton = styled.button`
   font-size: 0.8em;
   cursor: pointer;
   box-shadow: none;
-  background-color: #101522;
+  background-color: #2081e2;
   color: #fff;
   transition: 0.5s;
   &:hover {
-    background-color: #fff;
-    color: rgba(0, 0, 0, 1) !important;
+    background-color: #1868b7;
     box-shadow: none;
   }
 `;

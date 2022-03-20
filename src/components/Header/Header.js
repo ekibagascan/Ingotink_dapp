@@ -35,7 +35,7 @@ const Header = ({ toggle }) => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
-            <img alt="INGOTINK" src="logo.svg" height={45} />
+            <img alt="INGOTINK" src="logo.png" height={32} />
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
