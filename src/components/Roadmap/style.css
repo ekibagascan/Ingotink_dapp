@@ -156,18 +156,11 @@ body {
 
 }
 @media screen and (max-width: 480px) {
-  .tl-content {
-    top: 40%;
-  }
   .tl-content h1 {
-    font-size: 0.7rem;
+    font-size: 0.73rem;
   }
   .tl-content p {
-    font-size: 0.6rem;
-  }
-  .tl-year {
-    top: 30%;
-    bottom: 70%;
+    font-size: 0.65rem;
   }
   .tl-year p{
     font-size: 1.2rem;

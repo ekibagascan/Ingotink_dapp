@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
     height: 600px;
   }
   @media screen and (max-width: 480px) {
-    height: 400px;
+    height: 600px;
   }
 `;
 
