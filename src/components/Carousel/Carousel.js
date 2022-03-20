@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
+import Slide from "react-reveal/Slide";
 import styled from "styled-components";
 import "./style.css";
 
@@ -93,16 +94,20 @@ function Carousel() {
   return (
     <HeroContainer id="gallery">
       <div className="slider">
-        <Slider {...settings}>
-          {images.map((img, index) => (
-            <div
-              className={index === slideIndex ? "slide slide-active" : "slide"}
-              key={index}
-            >
-              <img src={img} alt="" />
-            </div>
-          ))}
-        </Slider>
+        <Slide right>
+          <Slider {...settings}>
+            {images.map((img, index) => (
+              <div
+                className={
+                  index === slideIndex ? "slide slide-active" : "slide"
+                }
+                key={index}
+              >
+                <img src={img} alt="" />
+              </div>
+            ))}
+          </Slider>
+        </Slide>
       </div>
     </HeroContainer>
   );

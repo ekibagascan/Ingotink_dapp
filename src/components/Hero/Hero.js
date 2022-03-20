@@ -33,7 +33,7 @@ const Hero = () => {
   });
 
   return (
-    <HeroContainer id="home">
+    <HeroContainer id="home" className="HeroCont">
       <HeroBg>
         <VideoBg ref={videoRef} muted src="./video.mp4" />
       </HeroBg>

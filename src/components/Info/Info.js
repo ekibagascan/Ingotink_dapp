@@ -11,6 +11,7 @@ import {
   ImgWrap,
   Img,
 } from "./InfoElements";
+import Fade from "react-reveal/Fade";
 
 const Info = ({ lightBg, imgStart, headline, description, alt, img }) => {
   return (
@@ -19,13 +20,19 @@ const Info = ({ lightBg, imgStart, headline, description, alt, img }) => {
         <InfoRow imgStart={imgStart}>
           <Column1>
             <TextWrapper>
-              <Heading>{headline}</Heading>
-              <Subtitle>{description}</Subtitle>
+              <Fade top>
+                <Heading>{headline}</Heading>
+              </Fade>
+              <Fade left>
+                <Subtitle>{description}</Subtitle>
+              </Fade>
             </TextWrapper>
           </Column1>
           <Column2>
             <ImgWrap>
-              <Img src={img} alt={alt} />
+              <Fade right>
+                <Img src={img} alt={alt} />
+              </Fade>
             </ImgWrap>
           </Column2>
         </InfoRow>

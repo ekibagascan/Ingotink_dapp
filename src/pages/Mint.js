@@ -97,8 +97,16 @@ export const ResponsiveWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
   @media (min-width: 767px) {
     flex-direction: row;
+  }
+  @media (max-width: 480px) {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 export const StyledLogo = styled.img`
@@ -249,7 +257,7 @@ const Mint = () => {
         style={{ padding: "24px 38px 24px", backgroundColor: "#fff" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-        <ResponsiveWrapper flex={1} style={{ padding: "25px 20px 0px" }} test>
+        <ResponsiveWrapper flex={1} test>
           <s.SpacerLarge />
           <s.Container
             flex={2}

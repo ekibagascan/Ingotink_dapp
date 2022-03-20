@@ -7,6 +7,7 @@ export const InfoContainer = styled.div`
     padding: 40px 0;
   }
 `;
+
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;

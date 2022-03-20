@@ -1,13 +1,9 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
-import {
-  TeamContainer,
-  TeamH1,
-  TeamWrapper,
-  TeamCard,
-  TeamIcon,
-} from "./TeamElements";
+import Fade from "react-reveal/Fade";
+
+import { TeamH1, TeamWrapper, TeamCard, TeamIcon } from "./TeamElements";
 import styled from "styled-components";
 
 const HeroContainer = styled.div`
@@ -56,32 +52,38 @@ const SocialIconLink = styled.a`
 const Team = () => {
   return (
     <HeroContainer id="team">
-      <TeamH1>Who Are We?</TeamH1>
-      <Subtitle
-        variant="subtitle1"
-        sx={{
-          color: "rgba(255, 255, 255, 0.8)",
-          margin: "10px 30px 20px",
-          textAlign: "center",
-        }}
-      >
-        RSYC was created by three friends who set out <br></br> to make some
-        dope roman statue, test our skills, and try to build something
-        (luxurious).
-      </Subtitle>
+      <Fade top>
+        <TeamH1>Who Are We?</TeamH1>
+        <Subtitle
+          variant="subtitle1"
+          sx={{
+            color: "rgba(255, 255, 255, 0.8)",
+            margin: "10px 30px 20px",
+            textAlign: "center",
+          }}
+        >
+          RSYC was created by three friends who set out <br></br> to make some
+          dope roman statue, test our skills, and try to build something
+          (luxurious).
+        </Subtitle>
+      </Fade>
       <TeamWrapper>
         <Grid>
-          <TeamCard>
-            <TeamIcon src="./images/1.jpg" />
-          </TeamCard>
+          <Fade top>
+            <TeamCard>
+              <TeamIcon src="./images/1.jpg" />
+            </TeamCard>
+          </Fade>
           <Grid
             alignItems="center"
             justifyContent="space-between"
             sx={{ display: "flex", flexDirection: "row" }}
           >
-            <Typography variant="h5" sx={{ color: "#fff" }}>
-              John Doe
-            </Typography>
+            <Fade top>
+              <Typography variant="h5" sx={{ color: "#fff" }}>
+                John Doe
+              </Typography>
+            </Fade>
             <NavMenu>
               <SocialIconLink
                 href="https://discord.gg/8TEc3XfGCM"
@@ -101,17 +103,21 @@ const Team = () => {
           </Grid>
         </Grid>
         <Grid>
-          <TeamCard>
-            <TeamIcon src="./images/2.jpg" />
-          </TeamCard>
+          <Fade top>
+            <TeamCard>
+              <TeamIcon src="./images/2.jpg" />
+            </TeamCard>
+          </Fade>
           <Grid
             alignItems="center"
             justifyContent="space-between"
             sx={{ display: "flex", flexDirection: "row" }}
           >
-            <Typography variant="h5" sx={{ color: "#fff" }}>
-              Richard Lee
-            </Typography>
+            <Fade top>
+              <Typography variant="h5" sx={{ color: "#fff" }}>
+                Richard Lee
+              </Typography>
+            </Fade>
             <NavMenu>
               <SocialIconLink
                 href="https://discord.gg/8TEc3XfGCM"
@@ -131,17 +137,21 @@ const Team = () => {
           </Grid>
         </Grid>
         <Grid>
-          <TeamCard>
-            <TeamIcon src="./images/3.jpg" />
-          </TeamCard>
+          <Fade top>
+            <TeamCard>
+              <TeamIcon src="./images/3.jpg" />
+            </TeamCard>
+          </Fade>
           <Grid
             alignItems="center"
             justifyContent="space-between"
             sx={{ display: "flex", flexDirection: "row" }}
           >
-            <Typography variant="h5" sx={{ color: "#fff" }}>
-              Martin Garrix
-            </Typography>
+            <Fade top>
+              <Typography variant="h5" sx={{ color: "#fff" }}>
+                Martin Garrix
+              </Typography>
+            </Fade>
             <NavMenu>
               <SocialIconLink
                 href="https://discord.gg/8TEc3XfGCM"
