@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
-import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import "./style.css";
 
@@ -94,7 +94,7 @@ function Carousel() {
   return (
     <HeroContainer id="gallery">
       <div className="slider">
-        <Slide bottom>
+        <Fade>
           <Slider {...settings}>
             {images.map((img, index) => (
               <div
@@ -107,7 +107,7 @@ function Carousel() {
               </div>
             ))}
           </Slider>
-        </Slide>
+        </Fade>
       </div>
     </HeroContainer>
   );
