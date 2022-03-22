@@ -10,7 +10,7 @@ import {
   SocialIconLink,
 } from "./FooterElements";
 
-const Footer = () => {
+const Footer = ({ twitter, instagram, discord, youtube }) => {
   return (
     <FooterContainer>
       <FooterWrap>
@@ -18,21 +18,36 @@ const Footer = () => {
           <SocialMediaWrap>
             <SocialLogo to="/">INGOTINK</SocialLogo>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+              <SocialIconLink
+                href={instagram}
+                target="_blank"
+                aria-label="Instagram"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Youtube">
+              <SocialIconLink
+                href={youtube}
+                target="_blank"
+                aria-label="Youtube"
+                rel="noopener noreferrer"
+              >
                 <FaYoutube />
               </SocialIconLink>
               <SocialIconLink
-                href="//www.twitter.com/briandesignz"
+                href={twitter}
                 target="_blank"
                 aria-label="Twitter"
                 rel="noopener noreferrer"
               >
                 <FaTwitter />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Discord">
+              <SocialIconLink
+                href={discord}
+                target="_blank"
+                aria-label="Discord"
+                rel="noopener noreferrer"
+              >
                 <FaDiscord />
               </SocialIconLink>
             </SocialIcons>

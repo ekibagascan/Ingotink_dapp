@@ -2,7 +2,8 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
-
+import { team_details } from "../../Data/Team_Details";
+import squad from "../../Data/Team";
 import { TeamH1, TeamWrapper, TeamCard, TeamIcon } from "./TeamElements";
 import styled from "styled-components";
 
@@ -53,7 +54,7 @@ const Team = () => {
   return (
     <HeroContainer id="team">
       <Fade top>
-        <TeamH1>Who Are We?</TeamH1>
+        <TeamH1>{team_details.heading}</TeamH1>
         <Subtitle
           variant="subtitle1"
           sx={{
@@ -62,114 +63,46 @@ const Team = () => {
             textAlign: "center",
           }}
         >
-          RSYC was created by three friends who set out <br></br> to make some
-          dope roman statue, test our skills, and try to build something
-          (luxurious).
+          {team_details.descriptions}
         </Subtitle>
       </Fade>
       <TeamWrapper>
-        <Grid>
-          <Fade top>
-            <TeamCard>
-              <TeamIcon src="./images/1.jpg" />
-            </TeamCard>
-          </Fade>
-          <Grid
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{ display: "flex", flexDirection: "row" }}
-          >
+        {squad.map((sq) => (
+          <Grid key={sq._id}>
             <Fade top>
-              <Typography variant="h5" sx={{ color: "#fff" }}>
-                John Doe
-              </Typography>
+              <TeamCard>
+                <TeamIcon src={sq.image} />
+              </TeamCard>
             </Fade>
-            <NavMenu>
-              <SocialIconLink
-                href="https://discord.gg/8TEc3XfGCM"
-                target="_blank"
-                arial-label="Instagram"
-              >
-                <FaInstagram />
-              </SocialIconLink>
-              <SocialIconLink
-                href="https://twitter.com/joker_punks"
-                target="_blank"
-                arial-label="Twitter"
-              >
-                <FaTwitter />
-              </SocialIconLink>
-            </NavMenu>
+            <Grid
+              alignItems="center"
+              justifyContent="space-between"
+              sx={{ display: "flex", flexDirection: "row" }}
+            >
+              <Fade top>
+                <Typography variant="h5" sx={{ color: "#fff" }}>
+                  {sq.name}
+                </Typography>
+              </Fade>
+              <NavMenu>
+                <SocialIconLink
+                  href={sq.insta}
+                  target="_blank"
+                  arial-label="Instagram"
+                >
+                  <FaInstagram />
+                </SocialIconLink>
+                <SocialIconLink
+                  href={sq.twitter}
+                  target="_blank"
+                  arial-label="Twitter"
+                >
+                  <FaTwitter />
+                </SocialIconLink>
+              </NavMenu>
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid>
-          <Fade top>
-            <TeamCard>
-              <TeamIcon src="./images/2.jpg" />
-            </TeamCard>
-          </Fade>
-          <Grid
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{ display: "flex", flexDirection: "row" }}
-          >
-            <Fade top>
-              <Typography variant="h5" sx={{ color: "#fff" }}>
-                Richard Lee
-              </Typography>
-            </Fade>
-            <NavMenu>
-              <SocialIconLink
-                href="https://discord.gg/8TEc3XfGCM"
-                target="_blank"
-                arial-label="instagram"
-              >
-                <FaInstagram />
-              </SocialIconLink>
-              <SocialIconLink
-                href="https://twitter.com/joker_punks"
-                target="_blank"
-                arial-label="Twitter"
-              >
-                <FaTwitter />
-              </SocialIconLink>
-            </NavMenu>
-          </Grid>
-        </Grid>
-        <Grid>
-          <Fade top>
-            <TeamCard>
-              <TeamIcon src="./images/3.jpg" />
-            </TeamCard>
-          </Fade>
-          <Grid
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{ display: "flex", flexDirection: "row" }}
-          >
-            <Fade top>
-              <Typography variant="h5" sx={{ color: "#fff" }}>
-                Martin Garrix
-              </Typography>
-            </Fade>
-            <NavMenu>
-              <SocialIconLink
-                href="https://discord.gg/8TEc3XfGCM"
-                target="_blank"
-                arial-label="Instagram"
-              >
-                <FaInstagram />
-              </SocialIconLink>
-              <SocialIconLink
-                href="https://twitter.com/joker_punks"
-                target="_blank"
-                arial-label="Twitter"
-              >
-                <FaTwitter />
-              </SocialIconLink>
-            </NavMenu>
-          </Grid>
-        </Grid>
+        ))}
       </TeamWrapper>
     </HeroContainer>
   );

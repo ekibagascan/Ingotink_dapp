@@ -13,9 +13,9 @@ import {
 } from "./InfoElements";
 import Fade from "react-reveal/Fade";
 
-const Info = ({ lightBg, imgStart, headline, description, alt, img }) => {
+const Info = ({ imgStart, headline, description, alt, img }) => {
   return (
-    <InfoContainer lightBg={lightBg} id="about">
+    <InfoContainer id="about">
       <InfoWrapper>
         <InfoRow imgStart={imgStart}>
           <Column1>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Hero from "../components/Hero/Hero";
 import Info from "../components/Info/Info";
-import { about } from "../data/Data";
+import { about } from "../Data/About";
+import { links } from "../Data/Link";
 import Carousel from "../components/Carousel/Carousel";
 import Roadmap from "../components/Roadmap/Roadmap";
 import Team from "../components/Team/Team";
@@ -24,7 +25,7 @@ const Home = () => {
       <Carousel />
       <Roadmap />
       <Team />
-      <Footer />
+      <Footer {...links} />
     </>
   );
 };
