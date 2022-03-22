@@ -94,7 +94,7 @@ function Carousel() {
   return (
     <HeroContainer id="gallery">
       <div className="slider">
-        <Slide right>
+        <Slide bottom>
           <Slider {...settings}>
             {images.map((img, index) => (
               <div

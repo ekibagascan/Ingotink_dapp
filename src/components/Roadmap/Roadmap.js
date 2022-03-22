@@ -1,5 +1,4 @@
 import React from "react";
-import Slide from 'react-reveal/Slide';
 import "./style.css";
 import styled from "styled-components";
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
+import { Link } from "@mui/material";
 import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
@@ -13,6 +14,21 @@ import {
 } from "./HeaderElements";
 
 const Header = ({ toggle }) => {
+  const [CONFIG, SET_CONFIG] = useState({
+    MARKETPLACE_LINK: "",
+  });
+
+  const getConfig = async () => {
+    const configResponse = await fetch("/config/config.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    const config = await configResponse.json();
+    SET_CONFIG(config);
+  };
+
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -29,6 +45,10 @@ const Header = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+
+  useEffect(() => {
+    getConfig();
+  }, []);
 
   return (
     <>
@@ -89,7 +109,15 @@ const Header = ({ toggle }) => {
                 TEAM
               </NavLinks>
             </NavItem>
-            <ConnectButton>OPENSEA</ConnectButton>
+            <Link
+              href={CONFIG.MARKETPLACE_LINK}
+              underline="none"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "#fff" }}
+            >
+              <ConnectButton>OPENSEA</ConnectButton>
+            </Link>
           </NavMenu>
         </NavbarContainer>
       </Nav>

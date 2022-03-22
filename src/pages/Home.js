@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Hero from "../components/Hero/Hero";
 import Info from "../components/Info/Info";
-import { homeObjOne } from "../components/Info/Data";
+import { about } from "../data/Data";
 import Carousel from "../components/Carousel/Carousel";
 import Roadmap from "../components/Roadmap/Roadmap";
 import Team from "../components/Team/Team";
@@ -20,7 +20,7 @@ const Home = () => {
       <Header toggle={toggle} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Hero />
-      <Info {...homeObjOne} />
+      <Info {...about} />
       <Carousel />
       <Roadmap />
       <Team />
