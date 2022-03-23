@@ -277,7 +277,7 @@ const Mint = () => {
               INGOTINK MINTING
             </Typography>
             <s.SpacerSmall />
-            <Image src="gif.gif" alt="NFT To Mint" />
+            <Image src="https://i.imgur.com/A8pBtUC.gif" alt="NFT To Mint" />
             <s.SpacerSmall />
             <Typography
               variant="subtitle1"
