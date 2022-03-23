@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x0b18b900F7375AABDa00EEaC988116C33fb05BD2",
-  "SCAN_LINK": "https://etherscan.com/token/0x0b18b900F7375AABDa00EEaC988116C33fb05BD2",
+  "CONTRACT_ADDRESS": "0xf1C013Baa3866E88c228D33A9D14D87eACd00436",
+  "SCAN_LINK": "https://etherscan.io/address/0xf1C013Baa3866E88c228D33A9D14D87eACd00436",
   "NETWORK": {
-    "NAME": "Ethereum", 
+    "NAME": "Ethereum",
     "SYMBOL": "ETH",
     "ID": 1
   },
-  "NFT_NAME": "The INGOTINK NFT",
+  "NFT_NAME": "INGOTINK-TEST",
   "SYMBOL": "IGT",
   "MAX_SUPPLY": 10000,
   "WEI_COST": 4000000000000000000,
   "DISPLAY_COST": 4,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/ingotink",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/ingotink-test-1",
   "SHOW_BACKGROUND": true
 }
