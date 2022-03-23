@@ -6,8 +6,8 @@ export const about = {
   description:
     "INGOTINK is a collection of 10,000 INGOTINK NFTs—unique digital collectibles living on the Ethereum blockchain. Your INGOTINK doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE MUSEUM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation.",
   imgStart: false,
-  // To change the "about image/gif"
-  img: "/gif.gif",
+  // To change the "image/gif"
+  img: "https://i.imgur.com/A8pBtUC.gif", //You can replace with an url
   //
   alt: "ingotink",
 };

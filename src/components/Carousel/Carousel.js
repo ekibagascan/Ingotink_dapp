@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import "./style.css";
+import gallery from "../../Data/Gallery";
 
 const HeroContainer = styled.div`
   background: #000;
@@ -24,17 +25,6 @@ const HeroContainer = styled.div`
 
 // import icons
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-
-// import images
-import img1 from "../images/1.jpg";
-import img2 from "../images/2.jpg";
-import img3 from "../images/3.jpg";
-import img4 from "../images/4.jpg";
-import img5 from "../images/5.jpg";
-import img6 from "../images/6.jpg";
-import img7 from "../images/7.jpg";
-
-const images = [img1, img2, img3, img4, img5, img6, img7];
 
 function SampleNextArrow({ onClick }) {
   return (
@@ -96,14 +86,14 @@ function Carousel() {
       <div className="slider">
         <Fade>
           <Slider {...settings}>
-            {images.map((img, index) => (
+            {gallery.map((img, index) => (
               <div
                 className={
                   index === slideIndex ? "slide slide-active" : "slide"
                 }
-                key={index}
+                key={img._id}
               >
-                <img src={img} alt="" />
+                <img src={img.image} alt="ingotink" />
               </div>
             ))}
           </Slider>

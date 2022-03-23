@@ -6,7 +6,7 @@ const squad = [
     name: "John Doe",
     insta: "https://instagram.com", //insta link
     twitter: "https://twitter.com", //twitter link
-    image: "/images/2.jpg", // You can replace with an image url
+    image: "https://i.imgur.com/qz1MSdh.jpg", // You can replace with an image url
   },
   {
     //Team 2
@@ -14,7 +14,7 @@ const squad = [
     name: "Richard Lee",
     insta: "https://instagram.com", //insta link
     twitter: "https://twitter.com", //twitter link
-    image: "/images/3.jpg", // You can replace with an image url
+    image: "https://i.imgur.com/FLnut1c.jpg", // You can replace with an image url
   },
   {
     //Team 3
@@ -22,7 +22,7 @@ const squad = [
     name: "Alex Demie",
     insta: "https://instagram.com", //insta link
     twitter: "https://twitter.com", //twitter link
-    image: "/images/1.jpg", // You can replace with an image url
+    image: "https://i.imgur.com/g4Afvms.jpg", // You can replace with an image url
   },
   //You can add more team if necessary
 ];
